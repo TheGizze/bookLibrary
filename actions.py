@@ -14,6 +14,9 @@ def add_book(library):
     confirmed = prompts.confirm_book(book)
     if confirmed:
         library.add_book(book)
+        prompts.book_added()
+    else:
+        prompts.book_not_added()
 
 
 def quit_app(library):

@@ -26,3 +26,11 @@ def confirm_book(book):
             return True
         if confirmation.lower() == "n":
             return False
+
+
+def book_added():
+    print("book added.")
+
+
+def book_not_added():
+    print("book not added.")
