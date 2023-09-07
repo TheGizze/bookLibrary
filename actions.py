@@ -7,7 +7,9 @@ def print_books(library):
 
 def add_book(library):
     book = prompts.get_book_info()
-    library.add_book(book)
+    confirmed = prompts.confirm_book(book)
+    if confirmed:
+        library.add_book(book)
 
 
 def invalid_action():
