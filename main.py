@@ -1,5 +1,5 @@
 import argparse
-
+import sys
 
 def read_arguments():
     argParser = argparse.ArgumentParser()
@@ -8,7 +8,17 @@ def read_arguments():
 
 
 def main(args):
-    print(args)
+
+    while True:
+        selection = input("\n1) add new book \n2) print current \nQ) exit\nselect: ")
+        if selection not in ("1", "2", "q", "Q"):
+            print('invalid action!')
+        if selection in ("q", "Q"):
+            sys.exit()
+        if selection == "1":
+           pass
+        if selection == "2":
+            pass
 
 
 if __name__ == "__main__":
