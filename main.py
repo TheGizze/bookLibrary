@@ -1,5 +1,6 @@
 import argparse
 import sys
+from fileHandler import FileHandler
 
 def read_arguments():
     argParser = argparse.ArgumentParser()
@@ -18,7 +19,10 @@ def main(args):
         if selection == "1":
            pass
         if selection == "2":
-            pass
+            file_handler = FileHandler(args.datafile)
+            books = file_handler.read_data()
+            for book in books:
+                print(book)
 
 
 if __name__ == "__main__":
