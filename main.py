@@ -1,7 +1,6 @@
 import argparse
-import actions
-from Library import Library
-import prompts
+from src.business import actions, prompts
+from src.BookLibrary.Library import Library
 
 
 def read_arguments():

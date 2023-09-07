@@ -1,4 +1,4 @@
-import prompts
+from src.business import prompts
 import sys
 
 
