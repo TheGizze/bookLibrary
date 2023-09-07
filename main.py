@@ -1,7 +1,7 @@
 import argparse
 import sys
-from FileHandler import FileHandler
-import Library
+import actions
+from Library import Library
 def read_arguments():
     argParser = argparse.ArgumentParser()
     argParser.add_argument("-d", "--datafile", help="datafile to read")
@@ -19,9 +19,7 @@ def main(args):
         if selection == "1":
            pass
         if selection == "2":
-            books = library.get_books()
-            for book in books:
-                print(book)
+            actions.print_books(library)
 
 
 if __name__ == "__main__":
