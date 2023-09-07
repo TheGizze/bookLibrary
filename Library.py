@@ -13,3 +13,13 @@ class Library:
     def add_book(self, book):
         self.books.append(book)
         self.fileHandler.write_data(self.books)
+
+    def arrange_books_by_year(self):
+        """
+        splits the line with '/' as a separator and uses the part with publishing year to sort
+        [0] book name
+        [1] author
+        [2] isbn
+        [3] year
+        """
+        self.books.sort(key=lambda x: x.split('/')[3])
