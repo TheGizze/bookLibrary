@@ -12,6 +12,8 @@ class Library:
 
     def add_book(self, book):
         self.books.append(book)
+
+    def write_library_to_file(self):
         self.fileHandler.write_data(self.books)
 
     def arrange_books_by_year(self):
