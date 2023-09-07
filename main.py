@@ -1,6 +1,6 @@
 import argparse
 import sys
-from fileHandler import FileHandler
+from FileHandler import FileHandler
 
 def read_arguments():
     argParser = argparse.ArgumentParser()

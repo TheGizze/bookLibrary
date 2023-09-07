@@ -1,4 +1,4 @@
-from fileHandler import FileHandler
+from FileHandler import FileHandler
 
 
 class Library:
