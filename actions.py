@@ -6,11 +6,7 @@ def print_books(library):
 
 
 def add_book(library):
-    book_name = input("\nbook name: ")
-    book_author = input("author name: ")
-    book_isbn = input("ISBN: ")
-    book_year = input("publishing year: ")
-    book = "{0}/{1}/{2}/{3}".format(book_name, book_author, book_isbn, book_year)
+    book = prompts.get_book_info()
     library.add_book(book)
 
 
