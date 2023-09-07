@@ -14,13 +14,13 @@ def add_book(library):
     confirmed = prompts.confirm_book(book)
     if confirmed:
         library.add_book(book)
+        library.write_library_to_file()
         prompts.book_added()
     else:
         prompts.book_not_added()
 
 
-def quit_app(library):
-    library.write_library_to_file()
+def quit_app():
     sys.exit()
 
 
