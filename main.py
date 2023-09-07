@@ -2,6 +2,7 @@ import argparse
 import sys
 import actions
 from Library import Library
+import prompts
 def read_arguments():
     argParser = argparse.ArgumentParser()
     argParser.add_argument("-d", "--datafile", help="datafile to read")
@@ -11,14 +12,14 @@ def read_arguments():
 def main(args):
     library = Library(args.datafile)
     while True:
-        selection = input("\n1) add new book \n2) print current \nQ) exit\nselect: ")
-        if selection not in ("1", "2", "q", "Q"):
+        action = prompts.ui_action()
+        if action not in ("1", "2", "q", "Q"):
             print('invalid action!')
-        if selection in ("q", "Q"):
+        if action in ("q", "Q"):
             sys.exit()
-        if selection == "1":
+        if action == "1":
             actions.add_book(library)
-        if selection == "2":
+        if action == "2":
             actions.print_books(library)
 
 
