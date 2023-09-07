@@ -17,7 +17,7 @@ def main(args):
         if selection in ("q", "Q"):
             sys.exit()
         if selection == "1":
-           pass
+            actions.add_book(library)
         if selection == "2":
             actions.print_books(library)
 
