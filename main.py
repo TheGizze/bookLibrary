@@ -14,7 +14,7 @@ def main(args):
     while True:
         action = prompts.ui_action()
         if action not in ("1", "2", "q", "Q"):
-            print('invalid action!')
+            actions.invalid_action()
         if action in ("q", "Q"):
             sys.exit()
         if action == "1":
