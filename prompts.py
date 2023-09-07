@@ -19,7 +19,7 @@ def confirm_book(book):
     print("Are you sure you want to add following book to library?\n" + book)
     while True:
         confirmation = input("(y/n): ")
-        print(confirmation)
+
         if confirmation.lower() not in ("y", "n"):
             print("invalid input!")
         if confirmation.lower() == "y" or None:
