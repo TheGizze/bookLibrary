@@ -16,7 +16,7 @@ def main(args):
         if action not in ("1", "2", "q", "Q"):
             actions.invalid_action()
         if action in ("q", "Q"):
-            sys.exit()
+            actions.quit_app(library)
         if action == "1":
             actions.add_book(library)
         if action == "2":

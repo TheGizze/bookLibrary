@@ -1,5 +1,5 @@
 import prompts
-
+import sys
 
 def print_books(library):
     library.arrange_books_by_year()  # arrange books before printing
@@ -13,6 +13,11 @@ def add_book(library):
     confirmed = prompts.confirm_book(book)
     if confirmed:
         library.add_book(book)
+
+
+def quit_app(library):
+    library.write_library_to_file()
+    sys.exit()
 
 def invalid_action():
     prompts.invalid_action()
