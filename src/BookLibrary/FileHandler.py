@@ -4,9 +4,15 @@ class FileHandler:
         self.data_source = data_source
 
     def read_data(self):
-        with open(self.data_source, 'r') as file:
-            data = file.read().splitlines()
-        return data
+        try:
+            with open(self.data_source, 'r') as file:
+                data = file.read().splitlines()
+            return data
+        except FileNotFoundError:
+            print("\n" + self. data_source + " not found!\n" + self. data_source +
+                  " file will be created once you add your first book!")
+            return []
+
 
     def write_data(self, data_set):
         with open(self.data_source, 'w') as file:
